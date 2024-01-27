@@ -7,6 +7,12 @@
 body{
     font-family: 'Poppins', sans-serif;
     background: #0f0f0f;
+    display: flex;
+    flex-direction: row;
+}
+
+p{
+    font-size: xx-small;
 }
 
 .container{
@@ -20,10 +26,11 @@ body{
 }
 
 .containerOne{
-    width: 500px;
-    height: 300px;
+    width: 200px;
+    height: 100px;
+    padding: 20px;
     background-color: #0f0f0f;
-    border-radius: 50px;
+    border-radius: 55px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -33,9 +40,12 @@ body{
 
 .containerOne button{
     font-family: 'Poppins', sans-serif;
-    margin: 30px;
-    padding: 20px;
-    width: 200px;
+    position: inherit;
+    margin: 10px;
+    padding: 10px;
+    width: 100px;
+    height: 30px;
+    font-size: xx-small;
     font-weight: bolder;
     border-radius: 20px;
     background-color: #0f0f0f;
@@ -56,8 +66,8 @@ body{
 
 .neonLayts{
     position: absolute;
-    width: 500px;
-    height: 300px;
+    width: 200px;
+    height: 100px;
     margin: 50%;
     background: linear-gradient(0deg, #000, #262626);
     border-radius: 55px;
