@@ -8,13 +8,19 @@ submitButton.addEventListener('click', () => {
 
     if (isBlurEnabled) {
         neonLayts.classList.add('blur-effect');
-        containerOne.querySelector('h1').innerText = "Aight! My Bad!"; 
+        containerOne.querySelector('p').innerText = "John Doe is a dedicated and experienced software engineer with a passion for creating efficient and scalable web applications. He has a strong background in JavaScript, HTML, and CSS, and is proficient in various frameworks and libraries such as React and Node.js. John is a team player and enjoys collaborating with others to solve complex problems and deliver high-quality solutions. With excellent problem-solving skills and attention to detail, he consistently delivers projects on time and exceeds client expectations. In his free time, John enjoys exploring new technologies, attending tech conferences, and contributing to open-source projects."
+        containerOne.querySelector('p').style.textAlign = "justify";
+        containerOne.style.height = "400px";
+        containerOne.querySelector('img').src = "./images/cat-nyan-cat.gif";
+        containerOne.querySelector('img').style.width = "100px";
+        neonLayts.style.height = "400px";
         submitButton.style.backgroundColor = "#0f0f0f";
     } else {
         neonLayts.classList.remove('blur-effect');
-        containerOne.querySelector('h1').innerText = "Nothing's here"; 
         submitButton.style.backgroundColor = "#0f0f0f";
     }
+
+    containerOne.querySelector('h1').innerText = isBlurEnabled ? "Aight! My Bad!" : "Nothing's here";
 });
 
 containerOne.addEventListener('mousemove', (event) => {
