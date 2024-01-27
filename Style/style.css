@@ -11,6 +11,7 @@ body{
 
 .container{
     display: flex;
+    /* margin: 50%; */
     width: 100%;
     height: 100vh;
     justify-content: center;
@@ -19,7 +20,7 @@ body{
 }
 
 .containerOne{
-    width: 600px;
+    width: 500px;
     height: 300px;
     background-color: #0f0f0f;
     border-radius: 50px;
@@ -43,21 +44,25 @@ body{
 }
 
 .containerOne button:hover{
-    background-color: green;
+    box-shadow: #000 10px 10px 20px;
     color: #fbf7fa;
     border: solid 2px rgba(0, 0, 0, 0);
-    transition: 3s;
+    transition: all 3s ease-in-out;
+}
+
+.containerOne button:hover::after{
+    transition: all 3s ease-in-out;
 }
 
 .neonLayts{
     position: absolute;
-    width: 600px;
+    width: 500px;
     height: 300px;
+    margin: 50%;
     background: linear-gradient(0deg, #000, #262626);
-    top: 34.25%;
-    left: 33.95;
     border-radius: 55px;
     overflow: hidden; /* Add overflow property to hide the blurred part */
+    z-index: -1;
 }
 
 .neonLayts::before{
@@ -75,7 +80,34 @@ body{
 }
 
 .neonLayts.blur-effect::before {
-    filter: blur(20px);
+    width: 550px;
+    height: 330px;
+    filter: blur(30px);
+}
+
+@media screen and (max-width: 425px){
+    .containerOne{
+        width: 300px;
+        height: 200px;
+        font-size: small;
+    }
+
+    .containerOne button{
+        width: 150px;
+        padding: 10px;
+        font-size: xx-small;
+    }
+
+    .neonLayts{
+        width: 300px;
+        height: 200px;
+    }
+
+    .neonLayts::before{
+        width: 350px;
+        height: 230px;
+    }
+    
 }
 
 @keyframes gradient {
