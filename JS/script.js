@@ -9,7 +9,7 @@ submitButton.addEventListener('click', () => {
     if (isBlurEnabled) {
         neonLayts.classList.add('blur-effect');
         containerOne.querySelector('h1').innerText = "Aight! My Bad!"; 
-        submitButton.style.backgroundColor = "green";
+        submitButton.style.backgroundColor = "#0f0f0f";
     } else {
         neonLayts.classList.remove('blur-effect');
         containerOne.querySelector('h1').innerText = "Nothing's here"; 
@@ -35,6 +35,7 @@ containerOne.addEventListener('mouseleave', () => {
     // Remove the blur effect when the mouse leaves the containerOne element
     if (isBlurEnabled) {
         neonLayts.style.filter = 'none';
+        neonLayts.style.transition = 'all 0.5s ease-in-out';
     }
 });
 
