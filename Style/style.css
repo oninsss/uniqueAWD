@@ -15,11 +15,28 @@ p{
     font-size: xx-small;
 }
 
+
+h2, p, h6{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.containerAll{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    color: #fbf7fa;
+}
+
 .container{
     display: flex;
     /* margin: 50%; */
-    width: 100%;
-    height: 100vh;
+    width: 100px;
+    height: 100px;
     justify-content: center;
     align-items: center;
     color: #fbf7fa;
@@ -42,31 +59,28 @@ p{
     font-family: 'Poppins', sans-serif;
     position: inherit;
     margin: 10px;
-    padding: 10px;
-    width: 100px;
+    width: fit-content;
+    padding-left: 10px;
+    padding-right: 10px;
     height: 30px;
     font-size: xx-small;
     font-weight: bolder;
     border-radius: 20px;
-    background-color: #0f0f0f;
+    background-color: green;
     border: solid 2px rgba(0, 0, 0, 0);
-    color: #0f0f0f;
+    color: #f1fbf7;
 }
 
 .containerOne button:hover{
     box-shadow: #000 10px 10px 20px;
     color: #fbf7fa;
-    border: solid 2px rgba(0, 0, 0, 0);
-    transition: all 3s ease-in-out;
-}
-
-.containerOne button:hover::after{
-    transition: all 3s ease-in-out;
+    border: solid 0.5px rgba(0, 0, 0, 0.5);
+    transition:all 1s ease-in-out;
 }
 
 .neonLayts{
     position: absolute;
-    width: 200px;
+    width: 190px;
     height: 100px;
     margin: 50%;
     background: linear-gradient(0deg, #000, #262626);
@@ -78,46 +92,15 @@ p{
 .neonLayts::before{
     content: '';
     position: absolute;
-    border-radius: 50px;
+    /* border-radius: 50px; */
     top: -2px;
     left: -2px;
     background: linear-gradient(45deg, red, orange, yellow, green, indigo, violet, red);
     background-size: 400%;
     width: calc(100% + 4px);
-    height: calc(100% + 4px);
+    height: calc(100% + 100px);
     z-index: -1;
-    animation: gradient 50s reverse infinite;
-}
-
-.neonLayts.blur-effect::before {
-    width: 550px;
-    height: 330px;
-    filter: blur(30px);
-}
-
-@media screen and (max-width: 425px){
-    .containerOne{
-        width: 300px;
-        height: 200px;
-        font-size: small;
-    }
-
-    .containerOne button{
-        width: 150px;
-        padding: 10px;
-        font-size: xx-small;
-    }
-
-    .neonLayts{
-        width: 300px;
-        height: 200px;
-    }
-
-    .neonLayts::before{
-        width: 350px;
-        height: 230px;
-    }
-    
+    animation: gradient 20s reverse infinite;
 }
 
 @keyframes gradient {
@@ -131,3 +114,57 @@ p{
         background-position: 0 0;
     }
 }
+
+@media screen and (max-width: 1024px){
+    body{
+        flex-direction: column;
+    }
+    .containerAll{
+        height: 600px;
+    }
+}
+
+
+@media screen and (max-width: 425px){
+    body{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .containerOne{
+        width: 290px;
+        height: 100px;
+        font-size: small;
+    }
+
+    .containerOne h4{
+        font-size: 2rem;
+    }
+
+    .containerOne button{
+        width: 60px;
+        padding: 10px;
+        font-size: 0.5rem;
+    }
+
+    #submitButton,
+    #submitButton2,
+    #submitButton3,
+    #submitButton4,
+    #submitButton5{
+        width: fit-content;
+    }
+
+    .neonLayts{
+        width: 290px;
+        height: fit-content;
+    }
+
+    .neonLayts::before{
+        width: 290px;
+        height: 440px;
+    }
+}
+
